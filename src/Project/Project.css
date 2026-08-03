@@ -1,0 +1,60 @@
+.project{
+    background-color: rgb(194, 192, 190);
+    min-height: 100vh;
+    padding: 4rem 2rem;
+}
+
+.project-des{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.project-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-img div{
+    text-align: center;
+}
+
+.project-img img{
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*Tablet Version */
+
+@media(max-width: 768px){
+    .project{
+        padding: 3rem 1.5rem;
+    }
+
+    .project-img img{
+        width: 260px;
+    }
+}
+
+/*Mobile Version */
+
+@media(max-width: 480px){
+    .project{
+        padding: 2rem 1rem;
+    }
+
+    .project-img img{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .project-des{
+        font-size: 1.2rem;
+    }
+}

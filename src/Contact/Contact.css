@@ -1,0 +1,67 @@
+.contact{
+    background-color: cadetblue;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+}
+
+.contact-des {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.contact-option{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.contact-option > div{
+    flex: 1;
+    min-width: 220px;
+}
+
+.contact-option img{
+    width: 80px;
+    height: 80px;
+    box-shadow: 2px 3px 4px 5px rgb(81, 81, 81) ;
+    border-radius: 50%;
+}
+
+@media(max-width: 768px){
+    .contact{
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-option{
+        gap:2rem;
+    }
+
+    .contact-option img{
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact-des {
+    font-size: 1.3rem;
+  }
+
+  .contact-option {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-option img {
+    width: 55px;
+    height: 55px;
+  }
+}

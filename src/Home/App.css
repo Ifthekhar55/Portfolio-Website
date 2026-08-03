@@ -1,0 +1,149 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(228, 228, 253);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* HOME */
+.home {
+  min-height: 100vh;
+  padding-top: 90px;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(228, 228, 253);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  height: 50px;
+  width: auto;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-menu li {
+  cursor: pointer;
+}
+
+.nav-menu li.active {
+  color: #38bdf8;
+  transition: color 0.3s;
+  border-bottom: 5px solid rgb(241, 126, 126);
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO */
+.middle-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5%;
+}
+
+.intro {
+  text-align: center;
+  flex: 2;
+}
+
+.intro h2 {
+  font-size: 3rem;
+}
+
+.intro p {
+  margin-top: 10px;
+}
+
+.middle img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 50%;
+}
+
+/* BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px;
+  gap: 20px;
+}
+
+.software-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.software-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: rgb(228, 228, 253);
+    flex-direction: column;
+    align-items:center;
+    padding: 20px 0;
+    gap: 20px;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .middle-container {
+    flex-direction: column;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+}
