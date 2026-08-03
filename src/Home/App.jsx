@@ -25,11 +25,10 @@ const navItems = [
 
 const tools = [
   { icon: <FaReact size={22} />, label: 'React.js' },
+  { icon: <FaReact size={22} />, label: 'TypeScript' },
   { icon: <FaNodeJs size={22} />, label: 'Node.js' },
   { icon: <FaDatabase size={22} />, label: 'PostgreSQL' },
-  { icon: <SiTailwindcss size={22} />, label: 'HTML/CSS' },
   { icon: <SiFramer size={22} />, label: 'Express.js' },
-  { icon: <SiVite size={22} />, label: 'Git/GitHub' },
 ];
 
 function Home() {
@@ -185,12 +184,12 @@ function Home() {
             </div>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
-              I build fast, modern web applications with HTML, CSS, JavaScript, React, Node.js, Express.js, PostgreSQL, Git, and GitHub.
+              I build fast, modern web applications with HTML, CSS, JavaScript, React,TypeScript,Node.js, Express.js, PostgreSQL.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/images/7_semesterFee.pdf"
+                href="/images/Ifthekhar_Islam_CV.pdf"
                 download
                 className="group inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/15 px-6 py-3 font-medium text-cyan-300 transition hover:-translate-y-1 hover:bg-cyan-500/25"
               >

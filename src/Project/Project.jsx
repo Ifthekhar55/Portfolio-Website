@@ -13,7 +13,7 @@ const projects = [
     description: 'A modern portfolio experience built with React, Tailwind, Framer Motion, and Vite, focused on premium visuals and smooth interactions.',
     stack: ['React', 'Tailwind', 'Framer Motion', 'Vite'],
     live: 'http://localhost:5174/',
-    github: 'https://github.com/Ifthekhar55',
+    github: 'https://github.com/Ifthekhar55/Portfolio-Website',
   },
   {
     title: 'BachelorHub',
@@ -22,7 +22,7 @@ const projects = [
     description: 'BachelorHub is a full-stack web application that helps students find housing, buy and sell items, access services, and connect through an integrated community.',
     stack: ['TypeScript', 'PostgreSQL'],
     live: 'https://bachelorhub-beta.vercel.app',
-    github: 'https://github.com/Ifthekhar55',
+    github: 'https://github.com/Ifthekhar55/bachelorhub',
   },
 ];
 
