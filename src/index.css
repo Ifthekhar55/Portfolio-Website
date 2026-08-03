@@ -59,6 +59,26 @@ body.light .text-slate-400 {
   color: #64748b !important;
 }
 
+body.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+body.light .text-slate-600 {
+  color: #475569 !important;
+}
+
+body.light .text-slate-700 {
+  color: #334155 !important;
+}
+
+body.light .text-slate-800 {
+  color: #1e293b !important;
+}
+
+body.light .text-slate-900 {
+  color: #0f172a !important;
+}
+
 body.light .text-cyan-300 {
   color: #0891b2 !important;
 }
@@ -95,6 +115,13 @@ body.light .section-card {
   color: #0f172a !important;
 }
 
+body.light .page-shell,
+body.light .section-shell,
+body.light footer {
+  background: rgba(248, 250, 252, 0.98) !important;
+  color: #0f172a !important;
+}
+
 body.light .section-card .text-slate-400 {
   color: #475569 !important;
 }
@@ -103,11 +130,30 @@ body.light .section-card .text-slate-300 {
   color: #334155 !important;
 }
 
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4,
+body.light p,
+body.light span,
+body.light li,
+body.light label,
+body.light small,
+body.light button,
+body.light a,
+body.light .section-heading-title {
+  color: #0f172a !important;
+}
+
+body.light p,
 body.light .section-card p,
 body.light .section-card .text-slate-400,
 body.light .section-card .text-slate-300,
 body.light .section-card .leading-8,
-body.light .section-card .leading-7 {
+body.light .section-card .leading-7,
+body.light .section-card .text-slate-500,
+body.light .section-card .text-slate-600,
+body.light .section-card .text-slate-700 {
   color: #475569 !important;
 }
 

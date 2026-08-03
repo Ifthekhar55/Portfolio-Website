@@ -86,7 +86,7 @@ function Home() {
   };
 
   return (
-    <div className="relative overflow-hidden bg-slate-950 text-slate-100" id="home">
+    <div className="page-shell relative overflow-hidden bg-slate-950 text-slate-100" id="home">
       <ScrollProgress />
       <AnimatedBackground />
 
@@ -184,7 +184,7 @@ function Home() {
             </div>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
-              I build fast, modern web applications with HTML, CSS, JavaScript, React,TypeScript,Node.js, Express.js, PostgreSQL.
+              I build fast, modern web applications with HTML, CSS, JavaScript, React,TypeScript,Node.js, Express.js & PostgreSQL.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -296,19 +296,19 @@ function App() {
 
       <Home />
 
-      <section id="about" className="bg-slate-950/90 px-4 py-24 sm:px-6 lg:px-8">
+      <section id="about" className="section-shell bg-slate-950/90 px-4 py-24 sm:px-6 lg:px-8">
         <About />
       </section>
 
-      <section id="skills" className="bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
+      <section id="skills" className="section-shell bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
         <Services />
       </section>
 
-      <section id="project" className="bg-slate-950/90 px-4 py-24 sm:px-6 lg:px-8">
+      <section id="project" className="section-shell bg-slate-950/90 px-4 py-24 sm:px-6 lg:px-8">
         <Project />
       </section>
 
-      <section id="contact" className="bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
+      <section id="contact" className="section-shell bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
         <Contact />
       </section>
 

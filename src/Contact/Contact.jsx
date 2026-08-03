@@ -53,18 +53,18 @@ function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55 }}
-          className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 via-slate-900 to-fuchsia-500/10 p-6 shadow-2xl shadow-black/20 backdrop-blur"
+          className="section-card rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 via-slate-900 to-fuchsia-500/10 p-6 shadow-2xl shadow-black/20 backdrop-blur"
         >
           <h3 className="text-2xl font-semibold text-white">Get in touch</h3>
-          <p className="mt-3 text-sm leading-8 text-slate-400">Whether you need a polished landing page, a modern portfolio, or a fast React experience, I’d love to hear about it.</p>
+          <p className="mt-3 text-sm leading-8 text-slate-300">Whether you need a polished landing page, a modern portfolio, or a fast React experience, I’d love to hear about it.</p>
 
           <div className="mt-6 space-y-4">
             {contactLinks.map((item) => (
-              <div key={item.title} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div key={item.title} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/70 p-4 dark:bg-slate-950/70">
                 <div className="mt-0.5 rounded-2xl bg-white/10 p-2 text-cyan-300">{item.icon}</div>
                 <div>
                   <div className="text-sm font-semibold text-white">{item.title}</div>
-                  <div className="mt-1 text-sm text-slate-400">{item.value}</div>
+                  <div className="mt-1 text-sm text-slate-300">{item.value}</div>
                 </div>
               </div>
             ))}
@@ -72,7 +72,7 @@ function Contact() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             {socials.map((social) => (
-              <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-slate-200 transition hover:-translate-y-1 hover:bg-white/20">
+              <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-slate-100 transition hover:-translate-y-1 hover:bg-white/20">
                 {social.icon}
                 <span>{social.label}</span>
               </a>
