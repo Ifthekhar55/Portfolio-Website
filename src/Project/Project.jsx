@@ -12,7 +12,7 @@ const projects = [
     image: '/images/Portfolio.png',
     description: 'A modern portfolio experience built with React, Tailwind, Framer Motion, and Vite, focused on premium visuals and smooth interactions.',
     stack: ['React', 'Tailwind', 'Framer Motion', 'Vite'],
-    live: 'http://localhost:5174/',
+    live: 'https://portfolio-website-alpha-woad.vercel.app',
     github: 'https://github.com/Ifthekhar55/Portfolio-Website',
   },
   {

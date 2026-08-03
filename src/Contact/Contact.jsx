@@ -20,6 +20,8 @@ const socials = [
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
   const validate = () => {
     const nextErrors = {};
@@ -30,12 +32,40 @@ function Contact() {
     return Object.keys(nextErrors).length === 0;
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (validate()) {
-      window.alert('Thanks for reaching out. I will get back to you soon.');
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const formData = new URLSearchParams({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+        _subject: `New portfolio message from ${form.name.trim()}`,
+        _captcha: 'false',
+        _template: 'table',
+      });
+
+      const response = await fetch('https://formsubmit.co/ajax/ifthekharulislam18@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Submission failed');
+      }
+
+      setSubmitStatus({ type: 'success', message: 'Thanks for reaching out. Your message has been sent.' });
       setForm({ name: '', email: '', message: '' });
       setErrors({});
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Something went wrong. Please email me directly at ifthekharulislam18@gmail.com.' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -91,25 +121,31 @@ function Contact() {
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="text-sm text-slate-300">
               <span className="mb-2 block">Name</span>
-              <input value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 outline-none ring-0" placeholder="Your name" />
+              <input name="name" value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 outline-none ring-0" placeholder="Your name" />
               {errors.name && <span className="mt-2 block text-xs text-rose-400">{errors.name}</span>}
             </label>
             <label className="text-sm text-slate-300">
               <span className="mb-2 block">Email</span>
-              <input value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 outline-none ring-0" placeholder="Your email" />
+              <input name="email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 outline-none ring-0" placeholder="Your email" />
               {errors.email && <span className="mt-2 block text-xs text-rose-400">{errors.email}</span>}
             </label>
           </div>
 
           <label className="mt-4 block text-sm text-slate-300">
             <span className="mb-2 block">Message</span>
-            <textarea value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} rows="5" className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 outline-none ring-0" placeholder="Tell me about your idea" />
+            <textarea name="message" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} rows="5" className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 outline-none ring-0" placeholder="Tell me about your idea" />
             {errors.message && <span className="mt-2 block text-xs text-rose-400">{errors.message}</span>}
           </label>
 
-          <motion.button whileHover={{ scale: 1.01, y: -2 }} whileTap={{ scale: 0.98 }} type="submit" className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-5 py-3 font-medium text-white">
+          {submitStatus.message && (
+            <p className={`mt-4 text-sm ${submitStatus.type === 'success' ? 'text-emerald-400' : 'text-rose-400'}`}>
+              {submitStatus.message}
+            </p>
+          )}
+
+          <motion.button whileHover={{ scale: isSubmitting ? 1 : 1.01, y: isSubmitting ? 0 : -2 }} whileTap={{ scale: isSubmitting ? 1 : 0.98 }} type="submit" disabled={isSubmitting} className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-5 py-3 font-medium text-white disabled:cursor-not-allowed disabled:opacity-70">
             <FiMail size={16} />
-            Send message
+            {isSubmitting ? 'Sending...' : 'Send message'}
           </motion.button>
         </motion.form>
       </div>

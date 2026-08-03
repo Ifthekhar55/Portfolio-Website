@@ -189,7 +189,7 @@ function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/images/Ifthekhar_Islam_CV.pdf"
+                href="/images/Iftekhar-Islam-Resume.pdf"
                 download
                 className="group inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/15 px-6 py-3 font-medium text-cyan-300 transition hover:-translate-y-1 hover:bg-cyan-500/25"
               >
