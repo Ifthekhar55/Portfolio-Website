@@ -8,7 +8,7 @@ import SectionHeading from '../components/SectionHeading.jsx';
 const projects = [
   {
     title: 'Premium Portfolio Website',
-    category: 'Fullstack',
+    category: 'Frontend',
     image: '/images/Portfolio.png',
     description: 'A modern portfolio experience built with React, Tailwind, Framer Motion, and Vite, focused on premium visuals and smooth interactions.',
     stack: ['React', 'Tailwind', 'Framer Motion', 'Vite'],
@@ -23,6 +23,15 @@ const projects = [
     stack: ['TypeScript', 'PostgreSQL'],
     live: 'https://bachelorhub-beta.vercel.app',
     github: 'https://github.com/Ifthekhar55/bachelorhub',
+  },
+  {
+    title: 'SchoolOS',
+    category: 'Fullstack',
+    image: '/images/SchoolOS.png',
+    description: 'SchoolOS is a full-stack school management SaaS for managing students, teachers, classes, attendance, exams, fees, notices, reports, and administrative operations through role-based dashboards and secure REST APIs.',
+    stack: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express.js','Prisma', 'PostgreSQL'],
+    live: 'https://school-os-orpin.vercel.app',
+    github: 'https://github.com/Ifthekhar55/SchoolOS',
   },
 ];
 
