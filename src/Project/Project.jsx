@@ -20,7 +20,7 @@ const projects = [
     category: 'Fullstack',
     image: '/images/Bachelorhub.png',
     description: 'BachelorHub is a full-stack web application that helps students find housing, buy and sell items, access services, and connect through an integrated community.',
-    stack: ['TypeScript', 'PostgreSQL'],
+    stack: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express.js','Prisma', 'PostgreSQL'],
     live: 'https://bachelorhub-beta.vercel.app',
     github: 'https://github.com/Ifthekhar55/bachelorhub',
   },
