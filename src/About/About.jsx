@@ -14,9 +14,13 @@ const stats = [
 
 const timeline = [
   {
-    year: 'August 2026 — Present',
     title: 'Software Development Intern at Tori It',
-    text: 'Contributing to software development projects in a professional team environment.<br />Developing and maintaining application features using modern web development technologies.<br />Collaborating with team members to troubleshoot issues, implement improvements and deliver assigned tasks.<br />',
+    year: 'August 2026 — Present',
+    text: [
+      'Contributing to software development projects in a professional team environment.',
+      'Developing and maintaining application features using modern web development technologies.',
+      'Collaborating with team members to troubleshoot issues, implement improvements and deliver assigned tasks.',
+    ],
   },
 ];
 
@@ -115,7 +119,11 @@ function About() {
                 <div className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">{item.year}</div>
                 <div className="mt-1 text-lg font-medium text-white">{item.title}</div>
               </div>
-              <p className="max-w-2xl text-sm leading-7 text-slate-400">{item.text}</p>
+              <div className="max-w-2xl space-y-2 text-sm leading-7 text-slate-400">
+                {item.text.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
