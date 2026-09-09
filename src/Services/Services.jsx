@@ -74,9 +74,9 @@ function Services() {
           </div>
           <div className="space-y-4">
             {[
-              { label: 'React & UI development', value: '92%' },
-              { label: 'Node.js & API development', value: '90%' },
-              { label: 'Database & backend integration', value: '95%' },
+              { label: 'React & UI development', value: '100%' },
+              { label: 'Node.js & API development', value: '100%' },
+              { label: 'Database & backend integration', value: '100%' },
             ].map((item) => (
               <div key={item.label}>
                 <div className="mb-2 flex items-center justify-between text-sm text-slate-300">
