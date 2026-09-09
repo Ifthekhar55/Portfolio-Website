@@ -8,15 +8,15 @@ import SectionHeading from '../components/SectionHeading.jsx';
 
 const stats = [
   { value: '1+', label: 'Year of experience' },
-  { value: '5+', label: 'Projects shipped' },
+  { value: '3+', label: 'Projects shipped' },
   { value: '100%', label: 'Focus on quality' },
 ];
 
 const timeline = [
   {
-    year: '2025 — Present',
-    title: 'Fullstack Developer',
-    text: 'Building modern web applications with React, Node.js, Express.js, PostgreSQL, and clean end-to-end architecture.',
+    year: 'August 2026 — Present',
+    title: 'Software Development Intern at Tori It',
+    text: 'Contributing to software development projects in a professional team environment.<br />Developing and maintaining application features using modern web development technologies.<br />Collaborating with team members to troubleshoot issues, implement improvements and deliver assigned tasks.<br />',
   },
 ];
 
